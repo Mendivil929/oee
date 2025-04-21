@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED82BEA9-B5D0-4606-BB36-4A5487AF294F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OEE1</RootNamespace>
+    <AssemblyName>OEE1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\PDNPD014\InventarioIT\OEE App_Nueva\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Control de OEE</ProductName>
+    <PublisherName>HanonApps</PublisherName>
+    <SuiteName>OEE</SuiteName>
+    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fabrica.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AD9DE092D8C129FC8AFBFA3F0487D43F6067D98C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OEE1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.3.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.3.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AreaBLL.cs" />
+    <Compile Include="BLL\MaquinaBLL.cs" />
+    <Compile Include="BLL\MensualBLL.cs" />
+    <Compile Include="BLL\RegistroBLL.cs" />
+    <Compile Include="DAL\conexionDAL.cs" />
+    <Compile Include="DAL\consultaDAL.cs" />
+    <Compile Include="DAL\CorreoAutomatico.cs" />
+    <Compile Include="DAL\RegistroDAL.cs" />
+    <Compile Include="PL\ApartadoCorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ApartadoCorreo.Designer.cs">
+      <DependentUpon>ApartadoCorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\CapturaPantalla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\CapturaPantalla.Designer.cs">
+      <DependentUpon>CapturaPantalla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ConsultaScrap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ConsultaScrap.Designer.cs">
+      <DependentUpon>ConsultaScrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ConsultaTiempoMuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ConsultaTiempoMuerto.Designer.cs">
+      <DependentUpon>ConsultaTiempoMuerto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\MenuOEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\MenuOEE.Designer.cs">
+      <DependentUpon>MenuOEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\oeePorArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\oeePorArea.Designer.cs">
+      <DependentUpon>oeePorArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\oeePorMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\oeePorMaquina.Designer.cs">
+      <DependentUpon>oeePorMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PantallaModificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PantallaModificacion.Designer.cs">
+      <DependentUpon>PantallaModificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\registro.Designer.cs">
+      <DependentUpon>registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ReporteMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ReporteMensual.Designer.cs">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\WindowsLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\WindowsLogin.Designer.cs">
+      <DependentUpon>WindowsLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\ApartadoCorreo.resx">
+      <DependentUpon>ApartadoCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\CapturaPantalla.resx">
+      <DependentUpon>CapturaPantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ConsultaScrap.resx">
+      <DependentUpon>ConsultaScrap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ConsultaTiempoMuerto.resx">
+      <DependentUpon>ConsultaTiempoMuerto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MenuOEE.resx">
+      <DependentUpon>MenuOEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\oeePorArea.resx">
+      <DependentUpon>oeePorArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\oeePorMaquina.resx">
+      <DependentUpon>oeePorMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PantallaModificacion.resx">
+      <DependentUpon>PantallaModificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\registro.resx">
+      <DependentUpon>registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ReporteMensual.resx">
+      <DependentUpon>ReporteMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PL\WindowsLogin.resx">
+      <DependentUpon>WindowsLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="OEE1_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanonLogo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flujo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fabrica.ico" />
+    <Content Include="Resources\fabrica.ico" />
+    <Content Include="Resources\hanonLogoPng.png" />
+    <None Include="Resources\hanonLogoPng1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

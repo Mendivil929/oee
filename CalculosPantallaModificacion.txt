@@ -1,0 +1,9 @@
+Target = tiempoPlanificado / CT
+
+Target = ((tiempoTrabajo - TiempoMuertoPlaneado) * 60) / CT
+
+Target * CT = (tiempoTrabajo - TiempoMuertoPlaneado) * 60
+
+(Target * CT) / 60 = tiempoTrabajo - TiempoMuertoPlaneado
+
+TiempoMuertoPlaneado = tiempoTrabajo - ((Target * CT) / 60)
